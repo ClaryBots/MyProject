@@ -1,1 +1,163 @@
 please work with me!
+User@INFBN001 MINGW64 ~
+$ cd ~/Desktop
+
+User@INFBN001 MINGW64 ~/Desktop (master)
+$ mkdir MyProject
+
+User@INFBN001 MINGW64 ~/Desktop (master)
+$ cd /MyProject
+bash: cd: /MyProject: No such file or directory
+
+User@INFBN001 MINGW64 ~/Desktop (master)
+$ cd MyProject/
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (master)
+$ git init
+Initialized empty Git repository in C:/Users/User/Desktop/MyProject/.git/
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (master)
+$ touch file.txt
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (master)
+$ ls
+file.txt
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (master)
+$ git add file.txt
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (master)
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   file.txt
+
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (master)
+$ git commit -m "This is my first commit!"
+[master (root-commit) f2ba570] This is my first commit!
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file.txt
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (master)
+$ git checkout -b branch2
+Switched to a new branch 'branch2'
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git branch
+* branch2
+  master
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git checkout
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git checkout -b master
+fatal: A branch named 'master' already exists.
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ remote add origin https://github.com/ClaryBots/MyProject.git
+bash: remote: command not found
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git push -u origin master
+fatal: 'origin' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ ^C
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git remote add origin https://github.com/ClaryBots/MyProject.git
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git push -u origin master
+Counting objects: 3, done.
+Writing objects: 100% (3/3), 218 bytes | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/ClaryBots/MyProject.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git push origin branch2
+Total 0 (delta 0), reused 0 (delta 0)
+To https://github.com/ClaryBots/MyProject.git
+ * [new branch]      branch2 -> branch2
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ touch MyName.txt
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ ls
+file.txt  MyName.txt
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git add MyName.txt
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git status
+On branch branch2
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   MyName.txt
+
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git push origin branch2
+Everything up-to-date
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git push origin branch2
+Everything up-to-date
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git pull origin master
+remote: Counting objects: 4, done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 4 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (4/4), done.
+From https://github.com/ClaryBots/MyProject
+ * branch            master     -> FETCH_HEAD
+   f2ba570..4971cce  master     -> origin/master
+Updating f2ba570..4971cce
+Fast-forward
+ pleasework | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 pleasework
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$ git log
+commit 4971cce15dadb794d1dad9d268a54257066cddb6 (HEAD -> branch2, origin/master)
+Merge: f2ba570 78e1d68
+Author: ClaryBots <cbotes6@gmail.com>
+Date:   Thu May 11 10:47:13 2017 +0200
+
+    Merge pull request #1 from ClaryBots/branch2
+
+    Please work with me!
+
+commit 78e1d683ac16ba1743d67a8bc02e8d1ae2e0edd3
+Author: ClaryBots <cbotes6@gmail.com>
+Date:   Thu May 11 10:45:57 2017 +0200
+
+    Please work with me!
+
+commit f2ba570e4dba5955d54cb7c5d2b13dd7f092c266 (origin/branch2, master)
+Author: ClaryBots <cbotes6@gmail.com>
+Date:   Thu May 11 10:26:47 2017 +0200
+
+    This is my first commit!
+
+User@INFBN001 MINGW64 ~/Desktop/MyProject (branch2)
+$
+
